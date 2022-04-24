@@ -2,7 +2,7 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.util.Scanner;
 
-public class HelloClient {
+public class RMIClient {
     public static void main(String[] args) {
         String host = "localhost";
         System.out.print("Insira a resposta: ");

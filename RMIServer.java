@@ -4,7 +4,7 @@ import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 
-public class HelloServer implements Questionario {
+public class RMIServer implements Questionario {
 
     public static ArrayList<String> questionario = new ArrayList<>();
     static {
@@ -50,7 +50,7 @@ public class HelloServer implements Questionario {
 
     public static void main(String[] args) {
         try {
-            HelloServer server = new HelloServer();
+            RMIServer server = new RMIServer();
             Questionario stub = (Questionario) UnicastRemoteObject.exportObject(server, 0);
             Registry registry = LocateRegistry.getRegistry();
             registry.bind(ServerEnum.serverName, stub);
