@@ -3,4 +3,4 @@ clear
 killall -9 rmiregistry
 javac *.java
 rmiregistry &
-gnome-terminal --tab -- java RMIServer
+java RMIServer

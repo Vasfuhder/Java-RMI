@@ -11,7 +11,7 @@ public class RMIClient {
         try {
             Registry registry = LocateRegistry.getRegistry(host);
 
-            Questionario stub = (Questionario) registry.lookup(ServerEnum.serverName);
+            IQuestionario stub = (IQuestionario) registry.lookup(ServerEnum.serverName);
 
             String msg = stub.corrigir(resposta);
             System.out.println("Resposta do servidor: "+msg);
