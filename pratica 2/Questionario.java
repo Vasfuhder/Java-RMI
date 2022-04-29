@@ -3,7 +3,8 @@ import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 
 public class Questionario extends UnicastRemoteObject implements IQuestionario {
-    Questionario() throws RemoteException {}
+    Questionario() throws RemoteException {
+    }
 
     @Override
     public ArrayList<String> getQuestionario() throws RemoteException {
